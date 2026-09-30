@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="mn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Horizon — Сургалтын төв</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="#top">Hor<span>iz</span>on<span>•</span></a>
+        <nav class="main-nav" aria-label="Үндсэн цэс">
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__toggle" type="button" aria-expanded="false" aria-controls="course-menu">
+              Сургалтууд
+              <svg class="nav-dropdown__chevron" aria-hidden="true" viewBox="0 0 12 12" focusable="false">
+                <path d="m3 4.5 3 3 3-3" />
+              </svg>
+            </button>
+            <div id="course-menu" class="nav-dropdown__menu" hidden>
+              <section class="menu-category"><h3><a href="foreign-languages.html">🌐 Гадаад хэл &amp; Боловсрол</a></h3><h4>Англи хэл</h4><a href="#courses">Ерөнхий &amp; ярианы англи хэл</a><a href="#courses">Академик: IELTS, TOEFL, SAT</a><a href="#courses">Бизнес &amp; ажлын байрны англи хэл</a><a href="#courses">Хүүхдийн англи хэл</a><h4>Солонгос хэл</h4><a href="#courses">Эхлэн суралцах &amp; ажиллах виз</a><a href="#courses">TOPIK шалгалтад бэлтгэх</a><a href="#courses">Ярианы практик</a><h4>Хятад, Япон &amp; Европ хэл</h4><a href="#courses">HSK 1–6, JLPT N5–N1</a><a href="#courses">Герман, Франц, Орос хэл</a><h4>Гадаадад суралцах зөвлөгөө</h4><a href="#courses">Тэтгэлэг, эссэ &amp; визний зөвлөгөө</a></section>
+              <section class="menu-category"><h3>💻 Мэдээллийн технологи &amp; Дизайн</h3><h4>Програмчлал &amp; код бичих</h4><a href="#courses">Веб: HTML, CSS, JavaScript, React</a><a href="#courses">Python &amp; Backend хөгжүүлэлт</a><a href="#courses">Flutter, iOS, Android</a><h4>График &amp; UI/UX дизайн</h4><a href="#courses">UI/UX дизайн: Figma</a><a href="#courses">Photoshop, Illustrator</a><a href="#courses">Motion &amp; 2D/3D анимаци</a><h4>Дата &amp; хиймэл интеллект</h4><a href="#courses">Data Science &amp; дата шинжилгээ</a><a href="#courses">AI хэрэгслүүд &amp; prompt engineering</a><h4>Дижитал маркетинг</h4><a href="#courses">SMM, SEO &amp; контент маркетинг</a><a href="#courses">Meta, Google Ads</a></section>
+              <section class="menu-category"><h3>💼 Хувь хүний хөгжил &amp; Бизнес</h3><h4>Бизнес &amp; менежмент</h4><a href="#courses">PMP, Agile төслийн менежмент</a><a href="#courses">Стартап &amp; стратеги</a><a href="#courses">Хүний нөөцийн менежмент</a><h4>Санхүү &amp; нягтлан бодох</h4><a href="#courses">Практик нягтлан бодох бүртгэл</a><a href="#courses">Татвар &amp; санхүүгийн шинжилгээ</a><a href="#courses">Хувь хүний санхүү</a><h4>Харилцаа &amp; бүтээмж</h4><a href="#courses">Илтгэх урлаг &amp; борлуулалт</a><a href="#courses">Хэлэлцээр &amp; манлайлал</a><a href="#courses">Цаг төлөвлөлт, ой тогтоолт</a><a href="#courses">Сэтгэл зүй &amp; стресс менежмент</a></section>
+              <section class="menu-category"><h3>⚽ Спорт, фитнесс &amp; эрүүл мэнд</h3><h4>Фитнесс &amp; бие галбир</h4><a href="#courses">Бодибилдинг &amp; дасгалжуулагч</a><a href="#courses">Жин хасах &amp; зөв хооллолт</a><h4>Йог &amp; стречинг</h4><a href="#courses">Хата йог &amp; пилатес</a><a href="#courses">Сунгалт &amp; нурууны эрүүл мэнд</a><h4>Тулааны урлаг</h4><a href="#courses">Таеквондо, каратэ, жүдо</a><a href="#courses">Бокс &amp; кикбокс</a><h4>Усны ба агаарын спорт</h4><a href="#courses">Усанд сэлэлт: анхан ба дээд</a><a href="#courses">Балет &amp; иогийн хослол</a></section>
+              <section class="menu-category"><h3>🎨 Урлаг, бүжиг &amp; хөгжим</h3><h4>Хөгжмийн зэмсэг</h4><a href="#courses">Төгөлдөр хуур &amp; гитар</a><a href="#courses">Морин хуур, укулеле, бөмбөр</a><h4>Бүжгийн сургалт</h4><a href="#courses">K-Pop, Hip-hop</a><a href="#courses">Сальса, бачата, гоод бүжиг</a><h4>Дүрслэх урлаг &amp; гар урлал</h4><a href="#courses">Уран зураг &amp; ваар урлал</a><a href="#courses">Гэрэл зураг &amp; видео монтаж</a><h4>Вокал &amp; тайзны урлаг</h4><a href="#courses">Дуулах, жүжиглэх, хөтлөх ур чадвар</a></section>
+              <section class="menu-category"><h3>💄 Гоо сайхан &amp; нарийн мэргэжил</h3><h4>Гоо сайхан &amp; визэж</h4><a href="#courses">Make-up &amp; хувийн будалт</a><a href="#courses">Сормуус, хөмсөг, арьс арчилгаа</a><h4>Үс засалт &amp; маникюр</h4><a href="#courses">Эрэгтэй/эмэгтэй үсчин</a><a href="#courses">Маникюр, педикюр &amp; nail art</a><h4>Хоол үйлдвэрлэл</h4><a href="#courses">Тогооч, нарийн боов, бариста</a><h4>Нарийн мэргэшил &amp; техник</h4><a href="#courses">Авто механик &amp; загвар зохион байгуулалт</a><a href="#courses">Оёдол &amp; брэнд бүтээх</a></section>
+            </div>
+          </div>
+          <a href="#partners">Бидний тухай</a>
+          <a href="#footer">Холбоо барих</a>
+        </nav>
+        <button class="mobile-menu" aria-label="Цэс нээх" aria-expanded="false">☰</button>
+      </div>
+    </header>
+    <main id="top">
+      <section class="hero-header page-section">
+        <div class="hero-header__frame">
+          <img class="hero-header__background" src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1800&q=85" alt="Сургалтын орчин" />
+          <div class="hero-header__copy"><h1>МЭДЛЭГЭЭР<br />ИРЭЭДҮЙГЭЭ<br />БҮТЭЭ.</h1><p>Шинэ ур чадвараа эзэмшиж, өөрийн боломжоо нээгээрэй.</p></div>
+          <article class="hero-course-card"><div class="hero-course-card__tag">Онцлох</div><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=680&q=85" alt="Хамтран суралцаж буй оюутнууд" /><h2>IELTS Masterclass</h2><p><s>₮420,000</s> <strong>₮299,000</strong></p><a class="primary-button" href="#courses">Дэлгэрэнгүй</a></article>
+        </div>
+      </section>
+      <section id="courses" class="courses page-section">
+        <div class="section-intro"><span>Featured</span><h2>Хямдралтай сургалтууд</h2><p>Шинэ элсэлт авч эхэлж байна.</p></div>
+        <a class="view-all" href="#footer">Дэлгэрэнгүй</a>
+        <div class="course-carousel" aria-label="Хямдралтай сургалтууд">
+          <div class="course-grid">
+          <article class="course-card"><div class="course-image course-image--foundation" role="img" aria-label="Суурь хичээлийн зураг"></div><div class="course-info"><h3>Суурь хичээл</h3><strong>₮450K</strong><p>3 сарын курс</p></div><a href="#footer">Дэлгэрэнгүй</a></article>
+          <article class="course-card"><div class="course-image course-image--marketing" role="img" aria-label="Дижитал маркетингийн зураг"></div><div class="course-info"><h3>Digital marketing</h3><strong>₮380K</strong><p>2 сарын курс</p></div><a href="#footer">Дэлгэрэнгүй</a></article>
+          <article class="course-card"><div class="course-image course-image--ux" role="img" aria-label="UX дизайны зураг"></div><div class="course-info"><h3>UX design</h3><strong>₮520K</strong><p>4 сарын курс</p></div><a href="#footer">Дэлгэрэнгүй</a></article>
+          <article class="course-card"><div class="course-image course-image--project" role="img" aria-label="Төслийн менежментийн зураг"></div><div class="course-info"><h3>Project management</h3><strong>₮610K</strong><p>3 сарын курс</p></div><a href="#footer">Дэлгэрэнгүй</a></article>
+          <article class="course-card"><div class="course-image course-image--graphic" role="img" aria-label="График дизайны зураг"></div><div class="course-info"><h3>Graphic design</h3><strong>₮420K</strong><p>2 сарын курс</p></div><a href="#footer">Дэлгэрэнгүй</a></article>
+          <article class="course-card"><div class="course-image course-image--web" role="img" aria-label="Веб хөгжүүлэлтийн зураг"></div><div class="course-info"><h3>Web development</h3><strong>₮550K</strong><p>3 сарын курс</p></div><a href="#footer">Дэлгэрэнгүй</a></article>
+          <article class="course-card"><div class="course-image course-image--toefl" role="img" aria-label="TOEFL бэлтгэлийн зураг"></div><div class="course-info"><h3>TOEFL preparation</h3><strong>₮460K</strong><p>2 сарын курс</p></div><a href="#footer">Дэлгэрэнгүй</a></article>
+          <article class="course-card"><div class="course-image course-image--topik" role="img" aria-label="TOPIK солонгос хэлний зураг"></div><div class="course-info"><h3>TOPIK Korean</h3><strong>₮390K</strong><p>3 сарын курс</p></div><a href="#footer">Дэлгэрэнгүй</a></article>
+          <article class="course-card"><div class="course-image course-image--finance" role="img" aria-label="Бизнес санхүүгийн зураг"></div><div class="course-info"><h3>Business finance</h3><strong>₮480K</strong><p>2 сарын курс</p></div><a href="#footer">Дэлгэрэнгүй</a></article>
+          <article class="course-card"><div class="course-image course-image--motion" role="img" aria-label="Motion дизайны зураг"></div><div class="course-info"><h3>Motion design</h3><strong>₮530K</strong><p>4 сарын курс</p></div><a href="#footer">Дэлгэрэнгүй</a></article>
+          </div>
+        </div>
+        <div class="course-controls"><div class="course-dots" aria-label="Слайдын төлөв"><button class="is-active" aria-label="1-р хуудас"></button><button aria-label="2-р хуудас"></button><button aria-label="3-р хуудас"></button><button aria-label="4-р хуудас"></button><button aria-label="5-р хуудас"></button><button aria-label="6-р хуудас"></button></div><div><button class="course-arrow" data-direction="previous" aria-label="Өмнөх сургалтууд">←</button><button class="course-arrow" data-direction="next" aria-label="Дараагийн сургалтууд">→</button></div></div>
+      </section>
+      <section id="partners" class="partners page-section">
+        <div class="partner-heading"><h2>Хамтрагч сургалтууд</h2></div>
+        <div class="partner-carousel" aria-label="Манай багш нар">
+          <div class="partner-track">
+            <article class="partner-card"><div class="partner-card__logo logo--gegee" role="img" aria-label="Гэгээ академийн лого"></div><h3>Гэгээ академи</h3><p>Гадаад хэл</p></article>
+            <article class="partner-card"><div class="partner-card__logo logo--code" role="img" aria-label="CodeHub лого"></div><h3>CodeHub</h3><p>IT &amp; дизайн</p></article>
+            <article class="partner-card"><div class="partner-card__logo logo--study" role="img" aria-label="Mongol Study лого"></div><h3>Mongol Study</h3><p>ЕБС &amp; хүүхдийн хөгжил</p></article>
+            <article class="partner-card"><div class="partner-card__logo logo--fit" role="img" aria-label="FitPro төвийн лого"></div><h3>FitPro төв</h3><p>Спорт &amp; фитнесс</p></article>
+            <article class="partner-card"><div class="partner-card__logo logo--art" role="img" aria-label="ArtLab studio лого"></div><h3>ArtLab studio</h3><p>Урлаг &amp; бүжиг</p></article>
+            <article class="partner-card"><div class="partner-card__logo logo--beauty" role="img" aria-label="Beauty Zone лого"></div><h3>Beauty Zone</h3><p>Гоо сайхан</p></article>
+            <article class="partner-card"><div class="partner-card__logo logo--business" role="img" aria-label="Business School лого"></div><h3>Business School</h3><p>Бизнес &amp; менежмент</p></article>
+            <article class="partner-card"><div class="partner-card__logo logo--edu" role="img" aria-label="Edu Plus лого"></div><h3>Edu Plus</h3><p>Хүүхдийн хөгжил</p></article>
+            <article class="partner-card"><div class="partner-card__logo logo--gegee" role="img" aria-label="Language House лого"></div><h3>Language House</h3><p>Гадаад хэл</p></article>
+            <article class="partner-card"><div class="partner-card__logo logo--code" role="img" aria-label="Digital Skills лого"></div><h3>Digital Skills</h3><p>Мэдээллийн технологи</p></article>
+            <article class="partner-card"><div class="partner-card__logo logo--fit" role="img" aria-label="Fit Academy лого"></div><h3>Fit Academy</h3><p>Эрүүл мэнд &amp; фитнесс</p></article>
+            <article class="partner-card"><div class="partner-card__logo logo--art" role="img" aria-label="Music Lab лого"></div><h3>Music Lab</h3><p>Хөгжим &amp; урлаг</p></article>
+          </div>
+          <button class="partner-arrow" data-direction="previous" aria-label="Өмнөх багш нар">←</button>
+          <button class="partner-arrow partner-arrow--next" data-direction="next" aria-label="Дараагийн багш нар">→</button>
+        </div>
+      </section>
+    </main>
+    <footer id="footer" class="footer">
+      <div class="footer-main">
+        <a class="footer-logo" href="#top">Horizon.</a>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#courses">Сургалтууд</a>
+          <a href="#partners">Хамтрагчид</a>
+          <a href="#top">Бидний тухай</a>
+          <a href="#footer">Холбоо барих</a>
+          <a href="#courses">Блог</a>
+        </nav>
+        <div class="footer-socials" aria-label="Social холбоосууд">
+          <a href="#footer" aria-label="Facebook">f</a>
+          <a href="#footer" aria-label="Instagram">◎</a>
+          <a href="#footer" aria-label="X">𝕏</a>
+          <a href="#footer" aria-label="LinkedIn">in</a>
+          <a href="#footer" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Horizon. Бүх эрх хуулиар хамгаалагдсан.</span>
+        <div><a href="#footer">Нууцлалын бодлого</a><a href="#footer">Үйлчилгээний нөхцөл</a><a href="#footer">Cookie тохиргоо</a></div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

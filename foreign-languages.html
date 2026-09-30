@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="mn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Гадаад хэлний сургалтууд — Horizon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="catalog-page">
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="index.html">Hor<span>iz</span>on<span>•</span></a>
+        <nav class="main-nav" aria-label="Үндсэн цэс">
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__toggle" type="button" aria-expanded="false" aria-controls="course-menu">
+              Сургалтууд
+              <svg class="nav-dropdown__chevron" aria-hidden="true" viewBox="0 0 12 12" focusable="false"><path d="m3 4.5 3 3 3-3" /></svg>
+            </button>
+            <div id="course-menu" class="nav-dropdown__menu" hidden>
+              <section class="menu-category"><h3><a href="foreign-languages.html">🌐 Гадаад хэл &amp; Боловсрол</a></h3></section>
+              <section class="menu-category"><h3>💻 Мэдээллийн технологи &amp; Дизайн</h3></section>
+              <section class="menu-category"><h3>💼 Хувь хүний хөгжил &amp; Бизнес</h3></section>
+              <section class="menu-category"><h3>⚽ Спорт, фитнесс &amp; эрүүл мэнд</h3></section>
+              <section class="menu-category"><h3>🎨 Урлаг, бүжиг &amp; хөгжим</h3></section>
+              <section class="menu-category"><h3>💄 Гоо сайхан &amp; нарийн мэргэжил</h3></section>
+            </div>
+          </div>
+          <a href="index.html#partners">Бидний тухай</a>
+          <a href="#footer">Холбоо барих</a>
+        </nav>
+        <button class="mobile-menu" aria-label="Цэс нээх" aria-expanded="false">☰</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="catalog-heading">
+        <div class="catalog-container">
+          <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Нүүр</a><span>›</span><a class="breadcrumb-parent" href="foreign-languages.html" aria-current="page">Гадаад хэл &amp; Боловсрол</a><span id="catalog-breadcrumb-separator" hidden>›</span><strong id="catalog-breadcrumb-current" hidden></strong></nav>
+          <h1 id="catalog-title">Гадаад хэл &amp; Боловсрол <span>107</span></h1>
+          <nav class="catalog-category-nav" aria-label="Гадаад хэлний ангиллууд">
+            <div><a href="#results" data-category="Англи хэл" data-count="24">Англи хэл <span class="category-count">24</span></a><a href="#results" data-category="Солонгос хэл" data-count="16">Солонгос хэл <span class="category-count">16</span></a></div>
+            <div><a href="#results" data-category="Хятад хэл" data-count="13">Хятад хэл <span class="category-count">13</span></a><a href="#results" data-category="Япон хэл" data-count="10">Япон хэл <span class="category-count">10</span></a></div>
+            <div><a href="#results" data-category="Европ хэлнүүд" data-count="12">Европ хэлнүүд <span class="category-count">12</span></a><a href="#results" data-category="IELTS/TOPIK бэлтгэл" data-count="11">IELTS/TOPIK бэлтгэл <span class="category-count">11</span></a></div>
+            <div><a href="#results" data-category="Хүүхдийн боловсрол" data-count="9">Хүүхдийн боловсрол <span class="category-count">9</span></a><a href="#results" data-category="Гадаадад суралцах тэтгэлэгт хөтөлбөрүүд" data-count="12">Гадаадад суралцах тэтгэлэгт хөтөлбөрүүд <span class="category-count">12</span></a></div>
+          </nav>
+        </div>
+      </section>
+
+      <section id="results" class="catalog-content">
+        <div class="catalog-container">
+          <div class="catalog-layout">
+            <aside class="course-filters" aria-label="Сургалтын шүүлтүүр">
+              <div class="filter-title"><strong>Нарийвчилсан шүүлтүүр</strong><button type="button" aria-label="Шүүлтүүр хаах">×</button></div>
+              <label class="filter-search"><span class="sr-only">Хайх</span><input type="search" placeholder="Хүртээмж, хэл, хаяг..." />⌕</label>
+              <fieldset class="filter-group" data-filter-group="location"><legend>Байршил (Дүүрэг)</legend><label><input type="checkbox" value="Сүхбаатар" /> Сүхбаатар</label><label><input type="checkbox" value="Баянзүрх" /> Баянзүрх</label><label><input type="checkbox" value="Хан-Уул" /> Хан-Уул</label><label><input type="checkbox" value="Сонгинохайрхан" /> Сонгинохайрхан</label></fieldset>
+              <fieldset class="filter-group" data-filter-group="format"><legend>Сургалтын хэлбэр</legend><label><input type="checkbox" value="Танхим" /> Танхим</label><label><input type="checkbox" value="Онлайн" /> Онлайн</label><label><input type="checkbox" value="Хосолсон" /> Хосолсон</label></fieldset>
+              <fieldset class="filter-group" data-filter-group="level"><legend>Түвшин</legend><label><input type="checkbox" value="Анхан шат" /> Анхан шат</label><label><input type="checkbox" value="Дунд шат" /> Дунд шат</label><label><input type="checkbox" value="Ахисан шат" /> Ахисан шат</label><label><input type="checkbox" value="IELTS/TOEFL" /> IELTS/TOEFL</label></fieldset>
+              <fieldset class="filter-group"><legend>Төлбөр</legend><div class="price-range"><span>₮100,000</span><output id="price-value" for="price-slider">₮500,000</output></div><input id="price-slider" class="range" type="range" min="100000" max="1000000" step="100000" value="500000" /></fieldset>
+              <button class="filter-button" type="button">Шүүх</button>
+            </aside>
+
+            <div class="catalog-results">
+              <article class="catalog-course-card">
+                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=500&q=80" alt="Англи хэлний анги" />
+                <div class="catalog-card__body"><p class="provider">Lingua Centre</p><h3>Англи хэлний дунд шатны эрчимжүүлсэн сургалт</h3><p class="rating">★★★★★ <span>4.7</span> · СБД</p><p class="course-meta">▣ 6 долоо хоног · 90 цагийн хөтөлбөр</p><div class="course-action"><a href="course-detail.html">Дэлгэрэнгүй</a><strong>450,000₮ / сар</strong></div></div>
+              </article>
+              <article class="catalog-course-card">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=500&q=80" alt="TOEFL бэлтгэлийн анги" />
+                <div class="catalog-card__body"><p class="provider">EFL School</p><h3>TOEFL бэлтгэл (Гүнзгий)</h3><p class="rating">★★★★★ <span>4.1</span> · БГД</p><p class="course-meta">▣ 10/20-ноос эхэлнэ · 20 суудал</p><div class="course-action"><a href="course-detail.html">Дэлгэрэнгүй</a><strong>450,000₮</strong></div></div>
+              </article>
+              <article class="catalog-course-card">
+                <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=500&q=80" alt="Бизнес англи хэлний уулзалт" />
+                <div class="catalog-card__body"><p class="provider">ProTalk Academy</p><h3>Business English | Advanced</h3><p class="rating">★★★★★ <span>4.5</span> · ХУД</p><p class="course-meta">▣ Оройн анги · 8 долоо хоног</p><div class="course-action"><a href="course-detail.html">Дэлгэрэнгүй</a><strong>500,000₮</strong></div></div>
+              </article>
+              <nav class="pagination" aria-label="Хуудсуудаар шилжих"></nav>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-main"><a class="footer-logo" href="index.html">Horizon.</a><nav class="footer-nav" aria-label="Footer navigation"><a href="foreign-languages.html">Сургалтууд</a><a href="index.html#partners">Хамтрагчид</a><a href="index.html">Бидний тухай</a><a href="#footer">Холбоо барих</a><a href="#footer">Блог</a></nav><div class="footer-socials" aria-label="Social холбоосууд"><a href="#footer" aria-label="Facebook">f</a><a href="#footer" aria-label="Instagram">◎</a><a href="#footer" aria-label="X">𝕏</a><a href="#footer" aria-label="LinkedIn">in</a><a href="#footer" aria-label="YouTube">▶</a></div></div>
+      <div class="footer-bottom"><span>© 2025 Horizon. Бүх эрх хуулиар хамгаалагдсан.</span><div><a href="#footer">Нууцлалын бодлого</a><a href="#footer">Үйлчилгээний нөхцөл</a><a href="#footer">Cookie тохиргоо</a></div></div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
