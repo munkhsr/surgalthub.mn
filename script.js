@@ -5,6 +5,14 @@ const courseMenuToggle = document.querySelector('.nav-dropdown__toggle');
 const courseMenu = document.querySelector('.nav-dropdown__menu');
 const courseDropdown = document.querySelector('.nav-dropdown');
 
+document.querySelectorAll('.menu-category h3').forEach((heading) => {
+  if (!heading.textContent.includes('Мэдээллийн технологи') || heading.querySelector('a')) return;
+  const link = document.createElement('a');
+  link.href = 'technology-design.html';
+  link.textContent = heading.textContent;
+  heading.replaceChildren(link);
+});
+
 menuButton?.addEventListener('click', () => {
   const isOpen = navigation.classList.toggle('is-open');
   menuButton.setAttribute('aria-expanded', String(isOpen));
@@ -42,6 +50,8 @@ const catalogBreadcrumb = document.querySelector('#catalog-breadcrumb-current');
 const catalogBreadcrumbSeparator = document.querySelector('#catalog-breadcrumb-separator');
 const catalogCategoryNav = document.querySelector('.catalog-category-nav');
 const defaultCatalogTitle = catalogTitle?.innerHTML;
+const defaultCatalogCategory = document.body.dataset.defaultCategory || catalogCategoryNav?.querySelector('a[data-category]')?.dataset.category;
+const defaultCatalogCount = Number(document.body.dataset.defaultCount || catalogCategoryNav?.querySelector('a[data-category]')?.dataset.count || 0);
 
 function showCatalogCategory(category, count) {
   if (!catalogTitle || !catalogBreadcrumb || !category || !count) return;
@@ -68,7 +78,7 @@ function showCatalogOverview() {
   catalogCategoryNav?.removeAttribute('hidden');
   document.querySelector('.breadcrumb-parent')?.setAttribute('aria-current', 'page');
   document.querySelectorAll('.catalog-category-nav a').forEach((link) => link.removeAttribute('aria-current'));
-  refreshCatalogList('Англи хэл', 24);
+  refreshCatalogList(defaultCatalogCategory, defaultCatalogCount);
   resetFilterWizard();
 }
 
@@ -110,8 +120,15 @@ const additionalEnglishCourses = [
   ['EFL School', 'TOEFL Speaking Workshop', '4.5', 'БЗД', '4 долоо хоног · Онлайн', '280,000₮', 'photo-1434030216411-0b793f4b4173'],
 ];
 
+const additionalTechnologyCourses = Array.from({ length: 21 }, (_, index) => {
+  const titles = ['Full stack web development', 'UI/UX design with Figma', 'Python and data analysis', 'Mobile app development', 'Digital marketing'];
+  const images = ['photo-1461749280684-dccba630e2f6', 'photo-1558655146-9f40138edfeb', 'photo-1516321318423-f06f85e504b3', 'photo-1517245386807-bb43f82c33c4', 'photo-1556761175-b413da4baf72'];
+  return ['Digital Skills', titles[index % titles.length], '4.7', 'СБД', '8 долоо хоног · Танхим болон онлайн', `${320 + (index % 5) * 70},000₮`, images[index % images.length]];
+});
+const additionalCatalogCourses = document.body.dataset.catalogType === 'technology' ? additionalTechnologyCourses : additionalEnglishCourses;
+
 if (catalogResults) {
-  additionalEnglishCourses.forEach(([provider, title, rating, district, meta, price, image]) => {
+  additionalCatalogCourses.forEach(([provider, title, rating, district, meta, price, image]) => {
     const card = document.createElement('article');
     card.className = 'catalog-course-card';
     card.innerHTML = `<img src="https://images.unsplash.com/${image}?auto=format&fit=crop&w=500&q=80" alt="${title}" /><div class="catalog-card__body"><p class="provider">${provider}</p><h3>${title}</h3><p class="rating">★★★★★ <span>${rating}</span> · ${district}</p><p class="course-meta">▣ ${meta}</p><div class="course-action"><a href="course-detail.html">Дэлгэрэнгүй</a><strong>${price}</strong></div></div>`;
@@ -174,7 +191,7 @@ function refreshCatalogList(category, count) {
   if (!catalogResults || !catalogPagination || !count) return;
   catalogResults.querySelectorAll('.catalog-course-card').forEach((card) => card.remove());
 
-  const markup = category === 'Англи хэл'
+  const markup = category === defaultCatalogCategory
     ? englishCatalogMarkup.join('')
     : Array.from({ length: count }, (_, index) => {
       const [provider, titles, image] = categoryCourseInfo[category] ?? ['Horizon Academy', [category], 'photo-1524178232363-1fb2b075b655'];
