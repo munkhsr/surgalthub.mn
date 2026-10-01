@@ -35,7 +35,7 @@
     <main>
       <section class="detail-heading">
         <div class="detail-container">
-          <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Нүүр</a><span>›</span><a class="breadcrumb-parent" href="foreign-languages.html">Гадаад хэл &amp; Боловсрол</a><span>›</span><a class="breadcrumb-parent" href="foreign-languages.html">Англи хэл</a><span>›</span><strong data-detail-title>Англи хэлний дунд шат</strong></nav>
+          <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Нүүр</a><span>›</span><a class="breadcrumb-parent" href="foreign-languages.html">Гадаад хэл &amp; Боловсрол</a><span>›</span><a class="breadcrumb-parent" data-detail-category href="foreign-languages.html?category=%D0%90%D0%BD%D0%B3%D0%BB%D0%B8%20%D1%85%D1%8D%D0%BB">Англи хэл</a><span>›</span><strong data-detail-title>Англи хэлний дунд шат</strong></nav>
           <h1 data-detail-title>Англи хэлний дунд шатны сургалт</h1>
         </div>
       </section>
@@ -43,13 +43,17 @@
       <section class="detail-content">
         <div class="detail-container detail-layout">
           <div class="detail-main">
-            <div class="course-gallery">
-              <img class="course-gallery__main" data-detail-image src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=85" alt="Англи хэлний сургалтын анги" />
+            <div class="course-gallery" aria-label="Сургалтын зургууд">
+              <div class="course-gallery__stage">
+                <img class="course-gallery__main" data-detail-image src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=85" alt="Англи хэлний сургалтын анги" />
+                <button class="gallery-control gallery-control--previous" type="button" data-gallery-direction="previous" aria-label="Өмнөх зураг">‹</button>
+                <button class="gallery-control gallery-control--next" type="button" data-gallery-direction="next" aria-label="Дараагийн зураг">›</button>
+              </div>
               <div class="course-gallery__thumbs">
-                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=240&q=80" alt="Сургалтын анги" />
-                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=240&q=80" alt="Суралцагч" />
-                <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=240&q=80" alt="Сургалтын материал" />
-                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=240&q=80" alt="Багийн сургалт" />
+                <button class="gallery-thumb is-active" type="button" data-gallery-image="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=85" data-gallery-alt="Сургалтын анги" aria-label="Сургалтын анги" aria-current="true"><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=240&q=80" alt="" /></button>
+                <button class="gallery-thumb" type="button" data-gallery-image="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=85" data-gallery-alt="Суралцагч" aria-label="Суралцагч"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=240&q=80" alt="" /></button>
+                <button class="gallery-thumb" type="button" data-gallery-image="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=1200&q=85" data-gallery-alt="Сургалтын материал" aria-label="Сургалтын материал"><img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=240&q=80" alt="" /></button>
+                <button class="gallery-thumb" type="button" data-gallery-image="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=85" data-gallery-alt="Багийн сургалт" aria-label="Багийн сургалт"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=240&q=80" alt="" /></button>
               </div>
             </div>
 
@@ -73,12 +77,23 @@
           </div>
 
           <aside class="detail-sidebar">
-            <section class="detail-price-card"><strong data-detail-price>450,000₮ / сар</strong><a class="detail-call" href="tel:+97670000000">Дугаар харах</a><a class="detail-register" href="#footer">Бүртгүүлэх</a></section>
-            <section class="provider-card"><h2 data-detail-provider>Lingua Centre</h2><div class="provider-mark">LC</div><p>Англи хэлний олон түвшний сургалт болон олон улсын шалгалтын бэлтгэл явуулдаг төв.</p><div class="provider-stats"><span><b>12</b>идэвхтэй курс</span><span><b>4.7</b>дундаж үнэлгээ</span><span><b>125</b>суралцагч</span></div><div class="provider-progress"><span>Хэлтсийн чанар: 88%</span><i><b></b></i></div><a href="foreign-languages.html">Төвийн дэлгэрэнгүй</a></section>
+            <section class="detail-price-card"><strong data-detail-price>450,000₮ / сар</strong><a class="detail-call" href="tel:+97670000000" data-phone="+976 7000 0000">Дугаар харах</a><button class="detail-register" type="button" data-register-open>Бүртгүүлэх</button></section>
+            <section class="provider-card" data-provider-email="burtgel@linguacentre.example"><h2 data-detail-provider>Lingua Centre</h2><div class="provider-mark">LC</div><p>Англи хэлний олон түвшний сургалт болон олон улсын шалгалтын бэлтгэл явуулдаг төв.</p><p class="provider-contact"><span>Имэйл</span><a href="mailto:burtgel@linguacentre.example">burtgel@linguacentre.example</a></p><div class="provider-stats"><span><b>12</b>идэвхтэй курс</span><span><b>4.7</b>дундаж үнэлгээ</span><span><b>125</b>суралцагч</span></div><div class="provider-progress"><span>Хэлтсийн чанар: 88%</span><i><b></b></i></div><a href="foreign-languages.html">Төвийн дэлгэрэнгүй</a></section>
           </aside>
         </div>
       </section>
     </main>
+
+    <dialog class="registration-dialog" aria-labelledby="registration-title">
+      <form class="registration-form" data-registration-form>
+        <div class="registration-form__heading"><div><h2 id="registration-title">Сургалтад бүртгүүлэх</h2><p data-registration-course>Сонгосон сургалтын мэдээллээ илгээнэ үү.</p></div><button class="dialog-close" type="button" data-register-close aria-label="Хаах">×</button></div>
+        <label>Овог, нэр<input name="name" autocomplete="name" required /></label>
+        <label>Утасны дугаар<input name="phone" type="tel" autocomplete="tel" placeholder="9911 2233" required /></label>
+        <label>Имэйл хаяг<input name="email" type="email" autocomplete="email" required /></label>
+        <label>Тайлбар <span>(заавал биш)</span><textarea name="note" rows="3" placeholder="Тохиромжтой цаг, асуултаа бичнэ үү"></textarea></label>
+        <button class="registration-submit" type="submit">Имэйлээр илгээх</button>
+      </form>
+    </dialog>
 
     <footer id="footer" class="footer">
       <div class="footer-main"><a class="footer-logo" href="index.html">Horizon.</a><nav class="footer-nav" aria-label="Footer navigation"><a href="foreign-languages.html">Сургалтууд</a><a href="index.html#partners">Хамтрагчид</a><a href="index.html">Бидний тухай</a><a href="#footer">Холбоо барих</a><a href="#footer">Блог</a></nav><div class="footer-socials" aria-label="Social холбоосууд"><a href="#footer" aria-label="Facebook">f</a><a href="#footer" aria-label="Instagram">◎</a><a href="#footer" aria-label="X">𝕏</a><a href="#footer" aria-label="LinkedIn">in</a><a href="#footer" aria-label="YouTube">▶</a></div></div>
